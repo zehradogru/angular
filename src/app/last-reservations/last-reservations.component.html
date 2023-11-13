@@ -1,0 +1,7 @@
+<h2>Last Reservations</h2>
+<ul>
+  <li *ngFor="let reservation of reservations">
+    <!-- Display reservation details here -->
+    {{ reservation.customerName }}, {{ reservation.reservationDate }}
+  </li>
+</ul>
