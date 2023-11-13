@@ -1,7 +1,30 @@
-<h2>Last Reservations</h2>
-<ul>
-  <li *ngFor="let reservation of reservations">
-    <!-- Display reservation details here -->
-    {{ reservation.customerName }}, {{ reservation.reservationDate }}
-  </li>
-</ul>
+<div *ngIf="modelData">
+    <h2>Rezervasyon</h2>
+    <p>ID: {{ modelData.id }}</p>
+    <p>Müşteri ID: {{ modelData.customerId }}</p>
+    <p>Oda Türü: {{ modelData.roomType }}</p>
+    <p>Oda: {{ modelData.room }}</p>
+    <p>Giriş Tarihi: {{ modelData.dateArrival }}</p>
+    <p>Çıkış Tarihi: {{ modelData.dateDeparture }}</p>
+    <p>Notlar: {{ modelData.notes }}</p>
+    <p>Kaynak: {{ modelData.source }}</p>
+    <p>Ödeme Miktarı: {{ modelData.paymentAmount }}</p>
+    <p>Güncelleme Tarihi: {{ modelData.dateUpdated }}</p>
+    <p>Durum: {{ modelData.status }}</p>
+  
+    <h2>Müşteri Bilgileri</h2>
+    <p>Müşteri ID: {{ modelData.customer.id }}</p>
+    <p>T.C. Kimlik No: {{ modelData.customer.tcNo }}</p>
+    <p>Pasaport No: {{ modelData.customer.passportNo }}</p>
+    <p>Ulusal Kimlik: {{ modelData.customer.nationality }}</p>
+    <p>Ad: {{ modelData.customer.firstName }}</p>
+    <p>Soyad: {{ modelData.customer.lastName }}</p>
+    <p>Orta Ad: {{ modelData.customer.middleName }}</p>
+    <p>Adres: {{ modelData.customer.streetAddress }}</p>
+    <p>Şehir: {{ modelData.customer.city }}</p>
+    <p>Ülke: {{ modelData.customer.country }}</p>
+    <p>E-posta: {{ modelData.customer.email }}</p>
+    <p>Telefon: {{ modelData.customer.phone }}</p>
+    <p>Notlar: {{ modelData.customer.notes }}</p>
+  </div>
+  
